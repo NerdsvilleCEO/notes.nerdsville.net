@@ -1,0 +1,104 @@
+* Deep Learning Book
+** Introduction
+ - In the early days of AI, the field rapidly solved
+   problems which were intellectually difficult for humans
+   - These problems were able to be broken down into 
+    sequential mathematical rules.
+ - The challenge to AI has been solving tasks
+  which are easy for people to perform but
+  difficult for people to describe.
+   - These problems consist of:
+     - Recognizing people
+     - Recognizing spoken words
+ - Early versions of AI took place in formal
+   environments and did not require computers
+   to know much about the world.
+   - IBM's Deep Blue chess-playing system defeated
+     the world champion of the time.
+     - Chess is a very simple world
+       - Contains only 64 locations
+       - Has only 32 pieces that can move in very
+         rigidly defined ways
+         
+*** Knowledge Base AI
+  - One of the challenges in AI is getting the
+    informal knowledge into a computer
+    - There have been many AI projects which hard-coded
+      knowledge about the world in formal language
+      - Cyc is one of the most famous projects using this technique, it is 
+        an "inference engine" and database of statements in a language called CycL.
+        - Statements manually inputted by humans.
+        - Incredibly difficult for humans to come up with
+          formal rules with enough complexity to actually describe the world
+        - Cyc failed to understand a story about a person named Fred
+          shaving in the morning
+          - Root of this misunderstanding was with associating a human w/
+            electrical parts.
+          - Associated this example with a completely different entity.
+      - A computer can use logical inference to reason about this
+         
+*** AI Deep Learning 
+  + This solution is allowing computers to: 
+    - Learn from experience
+      - Enables the avoidance of the need for human operators 
+        to formally specify knowledge.
+    - Understand the world in terms of a hierarchy
+      of concepts
+      - Each concept is defined through its relation
+        to simpler concepts
+      - Enables computers to learn complicated concepts
+    - Drawing a graph to represent these concepts relationships
+      produces a graph that is very deep, hence the name
+
+*** Machine Learning (ML)
+  + The capability of AI systems to acquire their own knowledge by
+    extracting patterns from raw data.
+  + Enables automated tackling of problems involving knowledge of the real world to
+    intelligently create solutions which appear subjective
+  + Logistic Regression :: Simple ML algorithm which can determine whether to recommend
+      /cesarean delivery/ (C-Sections)
+    - Learns how each of the /features/ provided to it correlates with various known outcomes
+      - It can't, however, influence how /features/ are defined in any way.
+    - If an MRI scan of the patient were given, rather than the doctor's formalized report,
+      it couldn't take that data and turn it into something useful since the pixels in the MRI
+      scan don't correlate with potential complications.
+  + Naive Bayes :: Simple ML algorithm which can separate legitimate e-mal from spam.
+  + Feature :: Each piece of information included in the /representation/
+  + The performance of these simple ML algorithms depends on the /representation/ of the
+    data they are given
+    - For example, when logistic regression is used to recommend C-Sections, the doctor
+      *provides* several pieces of relevant information to the AI
+  + The dependence of /representations/ is a very common problem
+    - Examples
+      - Computer Science
+        - Operations such as searching through data can be optimized through intelligent
+          indexing, as well as structure.
+      - Daily life
+        - Arithmetic on Arabic numerals far easier for humans than Roman numerals
+    - Therefore, the representation chosen obviously has a huge effect on the performance of ML algs
+  + Many AI tasks can be solved by extracting relevant /features/ and then providing those to an ML
+    alg
+    - A useful /feature/ for speaker identification from sound is an estimate of the size of the speaker's
+      vocal tract
+      - Provides the ability to estimate how alike the speaker is to a man, woman or child.
+    - However, many tasks are much more difficult to know what features to extract.
+      - An example of this is writing a program to detect cars in photographs
+        - We know cars have wheels, and would like to use the presence of wheels as a /feature/,
+          however, the difficulty comes from artifacts such as shadows, glare of metal parts,
+          objects hiding part of the wheel, etc.
+*** Representation Learning
+   - A solution to this problem is to use ML to discover *both*
+     - The mapping from /representation/ to output
+     - The /representation/ itself
+   - Learned /representations/ often result in much better performance hand designed /representations/
+   - Enables AI to rapidly adapt to new tasks with minimal human intervention
+   - Can discover a good set of /features/ for simple tasks in minutes, and complex tasks in hours to months.
+     - HUGE reduction in time, as manually designing /features/ is a very complex task requiring a lot of time.
+     - Compare to the potential of taking decades for an entire community of researchers.
+   - The typical example of representation learning ihe /autoencoder/
+     - Encoder :: Converts input data into a different /representation/
+     - Decoder :: Converts the /encoded/ representation back into the original format.
+     - Autoencoder :: the combination of the /encoder/ function, and the /decoder/ function.
+       - Trained to preserve as much information as possible
+
+

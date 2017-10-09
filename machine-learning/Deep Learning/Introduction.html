@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-10-09 Mon 17:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="nerdsville" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org20a1443">1. Deep Learning Book</a>
+<ul>
+<li><a href="#org305851a">1.1. Introduction</a>
+<ul>
+<li><a href="#orgc402473">1.1.1. Knowledge Base AI</a></li>
+<li><a href="#orga946ae5">1.1.2. AI Deep Learning</a></li>
+<li><a href="#org3ff783b">1.1.3. Machine Learning (ML)</a></li>
+<li><a href="#orgd79eb2d">1.1.4. Representation Learning</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20a1443" class="outline-2">
+<h2 id="org20a1443"><span class="section-number-2">1</span> Deep Learning Book</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-org305851a" class="outline-3">
+<h3 id="org305851a"><span class="section-number-3">1.1</span> Introduction</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>In the early days of AI, the field rapidly solved
+problems which were intellectually difficult for humans
+<ul class="org-ul">
+<li>These problems were able to be broken down into 
+sequential mathematical rules.</li>
+</ul></li>
+<li>The challenge to AI has been solving tasks
+which are easy for people to perform but
+difficult for people to describe.
+<ul class="org-ul">
+<li>These problems consist of:
+<ul class="org-ul">
+<li>Recognizing people</li>
+<li>Recognizing spoken words</li>
+</ul></li>
+</ul></li>
+<li>Early versions of AI took place in formal
+environments and did not require computers
+to know much about the world.
+<ul class="org-ul">
+<li>IBM's Deep Blue chess-playing system defeated
+the world champion of the time.
+<ul class="org-ul">
+<li>Chess is a very simple world
+<ul class="org-ul">
+<li>Contains only 64 locations</li>
+<li>Has only 32 pieces that can move in very
+rigidly defined ways</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="outline-container-orgc402473" class="outline-4">
+<h4 id="orgc402473"><span class="section-number-4">1.1.1</span> Knowledge Base AI</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li>One of the challenges in AI is getting the
+informal knowledge into a computer
+<ul class="org-ul">
+<li>There have been many AI projects which hard-coded
+knowledge about the world in formal language
+<ul class="org-ul">
+<li>Cyc is one of the most famous projects using this technique, it is 
+an "inference engine" and database of statements in a language called CycL.
+<ul class="org-ul">
+<li>Statements manually inputted by humans.</li>
+<li>Incredibly difficult for humans to come up with
+formal rules with enough complexity to actually describe the world</li>
+<li>Cyc failed to understand a story about a person named Fred
+shaving in the morning
+<ul class="org-ul">
+<li>Root of this misunderstanding was with associating a human w/
+electrical parts.</li>
+<li>Associated this example with a completely different entity.</li>
+</ul></li>
+</ul></li>
+<li>A computer can use logical inference to reason about this</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga946ae5" class="outline-4">
+<h4 id="orga946ae5"><span class="section-number-4">1.1.2</span> AI Deep Learning</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li>This solution is allowing computers to: 
+<ul class="org-ul">
+<li>Learn from experience
+<ul class="org-ul">
+<li>Enables the avoidance of the need for human operators 
+to formally specify knowledge.</li>
+</ul></li>
+<li>Understand the world in terms of a hierarchy
+of concepts
+<ul class="org-ul">
+<li>Each concept is defined through its relation
+to simpler concepts</li>
+<li>Enables computers to learn complicated concepts</li>
+</ul></li>
+<li>Drawing a graph to represent these concepts relationships
+produces a graph that is very deep, hence the name</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3ff783b" class="outline-4">
+<h4 id="org3ff783b"><span class="section-number-4">1.1.3</span> Machine Learning (ML)</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>The capability of AI systems to acquire their own knowledge by
+extracting patterns from raw data.</li>
+<li>Enables automated tackling of problems involving knowledge of the real world to
+intelligently create solutions which appear subjective</li>
+<li id="Logistic Regression">Simple ML algorithm which can determine whether to recommend
+<i>cesarean delivery</i> (C-Sections)
+<ul class="org-ul">
+<li>Learns how each of the <i>features</i> provided to it correlates with various known outcomes
+<ul class="org-ul">
+<li>It can't, however, influence how <i>features</i> are defined in any way.</li>
+</ul></li>
+<li>If an MRI scan of the patient were given, rather than the doctor's formalized report,
+it couldn't take that data and turn it into something useful since the pixels in the MRI
+scan don't correlate with potential complications.</li>
+</ul></li>
+<li id="Naive Bayes">Simple ML algorithm which can separate legitimate e-mal from spam.</li>
+<li id="Feature">Each piece of information included in the <i>representation</i></li>
+<li>The performance of these simple ML algorithms depends on the <i>representation</i> of the
+data they are given
+<ul class="org-ul">
+<li>For example, when logistic regression is used to recommend C-Sections, the doctor
+<b>provides</b> several pieces of relevant information to the AI</li>
+</ul></li>
+<li>The dependence of <i>representations</i> is a very common problem
+<ul class="org-ul">
+<li>Examples
+<ul class="org-ul">
+<li>Computer Science
+<ul class="org-ul">
+<li>Operations such as searching through data can be optimized through intelligent
+indexing, as well as structure.</li>
+</ul></li>
+<li>Daily life
+<ul class="org-ul">
+<li>Arithmetic on Arabic numerals far easier for humans than Roman numerals</li>
+</ul></li>
+</ul></li>
+<li>Therefore, the representation chosen obviously has a huge effect on the performance of ML algs</li>
+</ul></li>
+<li>Many AI tasks can be solved by extracting relevant <i>features</i> and then providing those to an ML
+alg
+<ul class="org-ul">
+<li>A useful <i>feature</i> for speaker identification from sound is an estimate of the size of the speaker's
+vocal tract
+<ul class="org-ul">
+<li>Provides the ability to estimate how alike the speaker is to a man, woman or child.</li>
+</ul></li>
+<li>However, many tasks are much more difficult to know what features to extract.
+<ul class="org-ul">
+<li>An example of this is writing a program to detect cars in photographs
+<ul class="org-ul">
+<li>We know cars have wheels, and would like to use the presence of wheels as a <i>feature</i>,
+however, the difficulty comes from artifacts such as shadows, glare of metal parts,
+objects hiding part of the wheel, etc.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd79eb2d" class="outline-4">
+<h4 id="orgd79eb2d"><span class="section-number-4">1.1.4</span> Representation Learning</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li>A solution to this problem is to use ML to discover <b>both</b>
+<ul class="org-ul">
+<li>The mapping from <i>representation</i> to output</li>
+<li>The <i>representation</i> itself</li>
+</ul></li>
+<li>Learned <i>representations</i> often result in much better performance hand designed <i>representations</i></li>
+<li>Enables AI to rapidly adapt to new tasks with minimal human intervention</li>
+<li>Can discover a good set of <i>features</i> for simple tasks in minutes, and complex tasks in hours to months.
+<ul class="org-ul">
+<li>HUGE reduction in time, as manually designing <i>features</i> is a very complex task requiring a lot of time.</li>
+<li>Compare to the potential of taking decades for an entire community of researchers.</li>
+</ul></li>
+<li>The typical example of representation learning ihe <i>autoencoder</i>
+<dl class="org-dl">
+<dt>Encoder</dt><dd>Converts input data into a different <i>representation</i></dd>
+<dt>Decoder</dt><dd>Converts the <i>encoded</i> representation back into the original format.</dd>
+<dt>Autoencoder</dt><dd>the combination of the <i>encoder</i> function, and the <i>decoder</i> function.
+<ul class="org-ul">
+<li>Trained to preserve as much information as possible</li>
+</ul></dd>
+</dl></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: nerdsville</p>
+<p class="date">Created: 2017-10-09 Mon 17:56</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
