@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-10-09 Mon 17:56 -->
+<!-- 2017-10-15 Sun 11:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title></title>
@@ -232,75 +232,74 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org20a1443">1. Deep Learning Book</a>
+<li><a href="#org6657e0a">1. Deep Learning Book</a>
 <ul>
-<li><a href="#org305851a">1.1. Introduction</a>
+<li><a href="#orgd50bbb7">1.1. Introduction</a></li>
+<li><a href="#org6087c13">1.2. Knowledge Base AI</a></li>
+<li><a href="#org4ccd772">1.3. AI Deep Learning</a>
 <ul>
-<li><a href="#orgc402473">1.1.1. Knowledge Base AI</a></li>
-<li><a href="#orga946ae5">1.1.2. AI Deep Learning</a></li>
-<li><a href="#org3ff783b">1.1.3. Machine Learning (ML)</a></li>
-<li><a href="#orgd79eb2d">1.1.4. Representation Learning</a></li>
+<li><a href="#org238af21">1.3.1. History</a></li>
+<li><a href="#org605d08c">1.3.2. Cybernetics/Linear Models</a></li>
 </ul>
 </li>
+<li><a href="#org70aa500">1.4. Machine Learning (ML)</a></li>
+<li><a href="#orge609682">1.5. Representation Learning</a></li>
+<li><a href="#org9706d24">1.6. Design of Learning Features</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org20a1443" class="outline-2">
-<h2 id="org20a1443"><span class="section-number-2">1</span> Deep Learning Book</h2>
+<div id="outline-container-org6657e0a" class="outline-2">
+<h2 id="org6657e0a"><span class="section-number-2">1</span> Deep Learning Book</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-org305851a" class="outline-3">
-<h3 id="org305851a"><span class="section-number-3">1.1</span> Introduction</h3>
+</div><div id="outline-container-orgd50bbb7" class="outline-3">
+<h3 id="orgd50bbb7"><span class="section-number-3">1.1</span> Introduction</h3>
 <div class="outline-text-3" id="text-1-1">
+<p>
+In the early days of AI, the field rapidly solved problems which were
+intellectually difficult for humans
+</p>
 <ul class="org-ul">
-<li>In the early days of AI, the field rapidly solved
-problems which were intellectually difficult for humans
-<ul class="org-ul">
-<li>These problems were able to be broken down into 
+<li>These problems were able to be broken down into
 sequential mathematical rules.</li>
-</ul></li>
-<li>The challenge to AI has been solving tasks
-which are easy for people to perform but
+</ul>
+<p>
+The challenge to AI has been solving tasks which are easy for people to perform but
 difficult for people to describe.
-<ul class="org-ul">
-<li>These problems consist of:
+These problems consist of:
+</p>
 <ul class="org-ul">
 <li>Recognizing people</li>
 <li>Recognizing spoken words</li>
-</ul></li>
-</ul></li>
-<li>Early versions of AI took place in formal
-environments and did not require computers
+</ul>
+<p>
+Early versions of AI took place in formal environments and did not require computers
 to know much about the world.
+</p>
 <ul class="org-ul">
 <li>IBM's Deep Blue chess-playing system defeated
-the world champion of the time.
-<ul class="org-ul">
+the world champion of the time.</li>
 <li>Chess is a very simple world
 <ul class="org-ul">
 <li>Contains only 64 locations</li>
 <li>Has only 32 pieces that can move in very
 rigidly defined ways</li>
 </ul></li>
-</ul></li>
-</ul></li>
 </ul>
 </div>
+</div>
 
-<div id="outline-container-orgc402473" class="outline-4">
-<h4 id="orgc402473"><span class="section-number-4">1.1.1</span> Knowledge Base AI</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org6087c13" class="outline-3">
+<h3 id="org6087c13"><span class="section-number-3">1.2</span> Knowledge Base AI</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+One of the challenges in AI is getting the informal knowledge into a computer
+There have been many AI projects which hard-coded knowledge about the world in formal language
+Cyc is one of the most famous projects using this technique
+</p>
 <ul class="org-ul">
-<li>One of the challenges in AI is getting the
-informal knowledge into a computer
-<ul class="org-ul">
-<li>There have been many AI projects which hard-coded
-knowledge about the world in formal language
-<ul class="org-ul">
-<li>Cyc is one of the most famous projects using this technique, it is 
-an "inference engine" and database of statements in a language called CycL.
-<ul class="org-ul">
+<li>It is an "inference engine" and database of statements in a language called CycL.</li>
 <li>Statements manually inputted by humans.</li>
 <li>Incredibly difficult for humans to come up with
 formal rules with enough complexity to actually describe the world</li>
@@ -311,23 +310,20 @@ shaving in the morning
 electrical parts.</li>
 <li>Associated this example with a completely different entity.</li>
 </ul></li>
-</ul></li>
-<li>A computer can use logical inference to reason about this</li>
-</ul></li>
-</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orga946ae5" class="outline-4">
-<h4 id="orga946ae5"><span class="section-number-4">1.1.2</span> AI Deep Learning</h4>
-<div class="outline-text-4" id="text-1-1-2">
-<ul class="org-ul">
-<li>This solution is allowing computers to: 
+<div id="outline-container-org4ccd772" class="outline-3">
+<h3 id="org4ccd772"><span class="section-number-3">1.3</span> AI Deep Learning</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+This solution is allowing computers to:
+</p>
 <ul class="org-ul">
 <li>Learn from experience
 <ul class="org-ul">
-<li>Enables the avoidance of the need for human operators 
+<li>Enables the avoidance of the need for human operators
 to formally specify knowledge.</li>
 </ul></li>
 <li>Understand the world in terms of a hierarchy
@@ -337,43 +333,153 @@ of concepts
 to simpler concepts</li>
 <li>Enables computers to learn complicated concepts</li>
 </ul></li>
-<li>Drawing a graph to represent these concepts relationships
-produces a graph that is very deep, hence the name</li>
+</ul>
+<p>
+Drawing a graph to represent these concepts relationships produces a graph
+that is very deep, hence the name <i>Deep Learning</i>
+</p>
+
+<p>
+A good example of <i>Deep Learning</i> is the <i>Multilayer Perceptron</i> (MLP)
+An MLP is just a mathematical function which the application of provides a new
+<i>representation</i> of the input.
+</p>
+
+<p>
+The depth of deep learning enables the computer to learn a multistep computer program
+and provides a sort of "stack" which each level can refer to the previous levels, increasing
+the level of detail.
+</p>
+
+<p>
+Deep learning breaks a complicated mapping into a series of simple nested mappings
+</p>
+<dl class="org-dl">
+<dt>Visible Layer</dt><dd>The variables we are able to observe</dd>
+<dt>Hidden Layer</dt><dd>Values not given in the data, data which the model deems as useful for
+explaining the relationships in the observed data</dd>
+</dl>
+
+<p>
+There are two main ways of measuring the depth of a model:
+</p>
+<ul class="org-ul">
+<li>The number of sequential instructions that must be executed to evaluate the architecture</li>
+<li>The depth of the graph of the concepts relations to each other (used by <i>deep probabilistic models</i>)
+<ul class="org-ul">
+<li>This is usually much shorter than the number of computational instructions</li>
 </ul></li>
 </ul>
+<p>
+There is no single correct value for the depth of an architecture, just as there is no single correct value
+for the length of a computer program
+</p>
+
+<p>
+Deep learning has become more useful as the amount of avaialable training data has increased.
+</p>
+</div>
+
+<div id="outline-container-org238af21" class="outline-4">
+<h4 id="org238af21"><span class="section-number-4">1.3.1</span> History</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Deep learning has a long history, dating back to the 1940's.
+</p>
+
+<p>
+There have been three waves of development:
+</p>
+<ul class="org-ul">
+<li>Between the 1940s - 1960s it was known as <i>cybernetics</i></li>
+<li>Between the 1980s - 1990s it was known as <i>connectionism</i></li>
+<li>The current naming began in 2006</li>
+</ul>
+
+<p>
+Another name that Deep Learning has gone by is <i>artificial neural networks</i> (ANNs)
+</p>
+<ul class="org-ul">
+<li>The idea behind this is that deep learning models are engineered systems inspired by the
+biological brain</li>
+</ul>
+<p>
+The neural perspective on deep learning is motivated by two ideas
+</p>
+<ul class="org-ul">
+<li>The brain provides a proof of example that intelligent behavior is possible, and a straightforward
+path to building AI is to reverse engineer it.</li>
+<li>It would be interesting to understand the brain and the principles that underlie human intelligence.</li>
+</ul>
+<p>
+The modern term goes beyond neuroscientific perspectives and appeals to a principle of learning <i>multiple
+levels of composition</i>, which can be applied to non-neurally inspired ML frameworks.
+The earliest predecessors of modern deep learning were simple linear models motivated from a neuroscientific
+perspective.
+ The <i>neocognitron</i> (1980) introduced a powerful model architecture for processing images, and was inspired by the
+structure of the mammalian visual system, this later becomes the basis of the modern <i>convolutional network</i> (1988)
+</p>
+</div>
+</div>
+<div id="outline-container-org605d08c" class="outline-4">
+<h4 id="org605d08c"><span class="section-number-4">1.3.2</span> Cybernetics/Linear Models</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+These were designed to take a set of <i>n</i> input values x<sub>1</sub>,&#x2026;,x<sub>n</sub> and associate them with an output <i>y</i>
+and would learn a set of weights w<sub>1</sub>,&#x2026;,w<sub>n</sub> and compute their output.
+</p>
+<ul class="org-ul">
+<li>f(x, w) = x<sub>1</sub>w<sub>1</sub> + &#x2026; + x<sub>n</sub>w<sub>n</sub></li>
+</ul>
+<p>
+The <i>perceptron</i>, from the 1950's, was the earliest model which could learn the weights that defined the categories when given examples of inputs
+from each category
+</p>
+
+<p>
+The <i>adaptive linear element</i> (ADALINE), which dates to around the same time, simply returned the value of
+f(x) itself to predict a real number, and can be used to predict these numbers from data.
+</p>
+
+<p>
+The training algorithm called <i>stochastic gradient descent</i> could use these weights and adapt them. Slightly
+modified versions of this algorithm are the dominant algorithms used to this day.
+</p>
+
+<p>
+Linear models have many limitations. Most famously they can not learn the XOR function, where:
+  f([0,1], w) = 1, and f([1,0], w) = 1, but f([1,1], w) = 0 and f([0,0], w) = 0
+This is one of the reasons why neuroscience is no longer the predominant guide for deep learning, it is, however,
+still an important source of inspiration for deep learning researchers.
+We simply do not have enough information about the brain to use it as a guide.
+</p>
+
+<p>
+The basic idea of having many compulational units which become intelligent only via their interactions is
+inspired by the brain.
+</p>
+
+<p>
+The endeavor to understand how the brain works on an algorithmic level is known as <i>computational neuroscience</i>
+The field of deep learning is primarily concerned with how to build computer systems which are able to
+solve tasks requiring intelligence, while computational neruroscience is concerned with building more accurate
+models of how the brain actually works.
+</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org3ff783b" class="outline-4">
-<h4 id="org3ff783b"><span class="section-number-4">1.1.3</span> Machine Learning (ML)</h4>
-<div class="outline-text-4" id="text-1-1-3">
-<ul class="org-ul">
-<li>The capability of AI systems to acquire their own knowledge by
-extracting patterns from raw data.</li>
-<li>Enables automated tackling of problems involving knowledge of the real world to
-intelligently create solutions which appear subjective</li>
-<li id="Logistic Regression">Simple ML algorithm which can determine whether to recommend
-<i>cesarean delivery</i> (C-Sections)
-<ul class="org-ul">
-<li>Learns how each of the <i>features</i> provided to it correlates with various known outcomes
-<ul class="org-ul">
-<li>It can't, however, influence how <i>features</i> are defined in any way.</li>
-</ul></li>
-<li>If an MRI scan of the patient were given, rather than the doctor's formalized report,
-it couldn't take that data and turn it into something useful since the pixels in the MRI
-scan don't correlate with potential complications.</li>
-</ul></li>
-<li id="Naive Bayes">Simple ML algorithm which can separate legitimate e-mal from spam.</li>
-<li id="Feature">Each piece of information included in the <i>representation</i></li>
-<li>The performance of these simple ML algorithms depends on the <i>representation</i> of the
-data they are given
-<ul class="org-ul">
-<li>For example, when logistic regression is used to recommend C-Sections, the doctor
-<b>provides</b> several pieces of relevant information to the AI</li>
-</ul></li>
-<li>The dependence of <i>representations</i> is a very common problem
-<ul class="org-ul">
-<li>Examples
+
+<div id="outline-container-org70aa500" class="outline-3">
+<h3 id="org70aa500"><span class="section-number-3">1.4</span> Machine Learning (ML)</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Enables automated tackling of problems involving knowledge of the real world to
+intelligently create solutions which appear subjective
+The performance of these simple ML algorithms depends on the <i>representation</i> of the data
+The dependence of <i>representations</i> is a very common problem
+Examples include:
+</p>
 <ul class="org-ul">
 <li>Computer Science
 <ul class="org-ul">
@@ -384,18 +490,18 @@ indexing, as well as structure.</li>
 <ul class="org-ul">
 <li>Arithmetic on Arabic numerals far easier for humans than Roman numerals</li>
 </ul></li>
-</ul></li>
-<li>Therefore, the representation chosen obviously has a huge effect on the performance of ML algs</li>
-</ul></li>
-<li>Many AI tasks can be solved by extracting relevant <i>features</i> and then providing those to an ML
-alg
-<ul class="org-ul">
-<li>A useful <i>feature</i> for speaker identification from sound is an estimate of the size of the speaker's
+</ul>
+<p>
+Many AI tasks can be solved by extracting relevant <i>features</i> and then providing those to an ML alg
+A useful <i>feature</i> for speaker identification from sound is an estimate of the size of the speaker's
 vocal tract
+</p>
 <ul class="org-ul">
 <li>Provides the ability to estimate how alike the speaker is to a man, woman or child.</li>
-</ul></li>
-<li>However, many tasks are much more difficult to know what features to extract.
+</ul>
+<p>
+However, many tasks are much more difficult to know what features to extract.
+</p>
 <ul class="org-ul">
 <li>An example of this is writing a program to detect cars in photographs
 <ul class="org-ul">
@@ -403,14 +509,37 @@ vocal tract
 however, the difficulty comes from artifacts such as shadows, glare of metal parts,
 objects hiding part of the wheel, etc.</li>
 </ul></li>
-</ul></li>
+</ul>
+<p>
+Logistic Regressions are an example of some of the limitations of ML in that they:
+</p>
+<ul class="org-ul">
+<li>Learn how each of the <i>features</i> provided to it correlates with various known outcomes</li>
+<li>Can't influence how <i>features</i> are defined in any way.
+<ul class="org-ul">
+<li>If an MRI scan of the patient were given, rather than the doctor's formalized report,
+it couldn't take that data and turn it into something useful since the pixels in the MRI
+scan don't correlate with potential complications</li>
 </ul></li>
 </ul>
+
+<p>
+The new concepts learned in this section are:
+</p>
+<dl class="org-dl">
+<dt>Machine Learning</dt><dd>The capability of AI systems to acquire their own knowledge by extracting patterns
+from raw data</dd>
+<dt>Logistic Regression</dt><dd>Simple ML algorithm which can determine whether to recommend
+<i>cesarean delivery</i> (C-Sections)</dd>
+<dt>Naive Bayes</dt><dd>Simple ML algorithm which can separate legitimate e-mail from spam.</dd>
+<dt>Feature</dt><dd>Each piece of information included in the <i>representation</i>
+data they are given</dd>
+</dl>
 </div>
 </div>
-<div id="outline-container-orgd79eb2d" class="outline-4">
-<h4 id="orgd79eb2d"><span class="section-number-4">1.1.4</span> Representation Learning</h4>
-<div class="outline-text-4" id="text-1-1-4">
+<div id="outline-container-orge609682" class="outline-3">
+<h3 id="orge609682"><span class="section-number-3">1.5</span> Representation Learning</h3>
+<div class="outline-text-3" id="text-1-5">
 <ul class="org-ul">
 <li>A solution to this problem is to use ML to discover <b>both</b>
 <ul class="org-ul">
@@ -424,7 +553,11 @@ objects hiding part of the wheel, etc.</li>
 <li>HUGE reduction in time, as manually designing <i>features</i> is a very complex task requiring a lot of time.</li>
 <li>Compare to the potential of taking decades for an entire community of researchers.</li>
 </ul></li>
-<li>The typical example of representation learning ihe <i>autoencoder</i>
+<li>The typical example of representation learning is the <i>autoencoder</i></li>
+</ul>
+<p>
+The new concepts learned in this section are:
+</p>
 <dl class="org-dl">
 <dt>Encoder</dt><dd>Converts input data into a different <i>representation</i></dd>
 <dt>Decoder</dt><dd>Converts the <i>encoded</i> representation back into the original format.</dd>
@@ -432,16 +565,44 @@ objects hiding part of the wheel, etc.</li>
 <ul class="org-ul">
 <li>Trained to preserve as much information as possible</li>
 </ul></dd>
-</dl></li>
-</ul>
+</dl>
 </div>
+</div>
+<div id="outline-container-org9706d24" class="outline-3">
+<h3 id="org9706d24"><span class="section-number-3">1.6</span> Design of Learning Features</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+When designing features or algorithms for learning features, our goal is usually to
+separate the <i>factors of variation</i> that explain the observed data.
+In this context, a factor is each separate source of incluence
+</p>
+<ul class="org-ul">
+<li>Factors are often not directly observed, but rather unobserved forces or objects
+in the physical world that affect observable quantities</li>
+<li>Factors can be thought of as abstractions</li>
+</ul>
+<p>
+Some examples of <i>factors of variation</i> for a speech recording are:
+</p>
+<ul class="org-ul">
+<li>Speaker's age</li>
+<li>Gender</li>
+<li>Accent</li>
+</ul>
+
+<p>
+<b>Most applications require us to <i>disentagle</i> the <i>factors of variation</i> and discard of the ones we
+don't care about</b>
+<i>Deep Learning</i> solves this problem by expressing representations in terms of other, simpler representations
+This enables the computer to create complex concepts out of simpler ones.
+</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: nerdsville</p>
-<p class="date">Created: 2017-10-09 Mon 17:56</p>
+<p class="date">Created: 2017-10-15 Sun 11:30</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

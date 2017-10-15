@@ -1,104 +1,184 @@
 * Deep Learning Book
 ** Introduction
- - In the early days of AI, the field rapidly solved
-   problems which were intellectually difficult for humans
-   - These problems were able to be broken down into 
-    sequential mathematical rules.
- - The challenge to AI has been solving tasks
-  which are easy for people to perform but
-  difficult for people to describe.
-   - These problems consist of:
-     - Recognizing people
-     - Recognizing spoken words
- - Early versions of AI took place in formal
-   environments and did not require computers
-   to know much about the world.
+ In the early days of AI, the field rapidly solved problems which were
+ intellectually difficult for humans
+  - These problems were able to be broken down into
+   sequential mathematical rules.
+ The challenge to AI has been solving tasks which are easy for people to perform but
+ difficult for people to describe.
+ These problems consist of:
+  - Recognizing people
+  - Recognizing spoken words
+ Early versions of AI took place in formal environments and did not require computers
+ to know much about the world.
    - IBM's Deep Blue chess-playing system defeated
      the world champion of the time.
-     - Chess is a very simple world
-       - Contains only 64 locations
-       - Has only 32 pieces that can move in very
-         rigidly defined ways
-         
-*** Knowledge Base AI
-  - One of the challenges in AI is getting the
-    informal knowledge into a computer
-    - There have been many AI projects which hard-coded
-      knowledge about the world in formal language
-      - Cyc is one of the most famous projects using this technique, it is 
-        an "inference engine" and database of statements in a language called CycL.
-        - Statements manually inputted by humans.
-        - Incredibly difficult for humans to come up with
-          formal rules with enough complexity to actually describe the world
-        - Cyc failed to understand a story about a person named Fred
-          shaving in the morning
-          - Root of this misunderstanding was with associating a human w/
-            electrical parts.
-          - Associated this example with a completely different entity.
-      - A computer can use logical inference to reason about this
-         
-*** AI Deep Learning 
-  + This solution is allowing computers to: 
-    - Learn from experience
-      - Enables the avoidance of the need for human operators 
-        to formally specify knowledge.
-    - Understand the world in terms of a hierarchy
-      of concepts
-      - Each concept is defined through its relation
-        to simpler concepts
-      - Enables computers to learn complicated concepts
-    - Drawing a graph to represent these concepts relationships
-      produces a graph that is very deep, hence the name
+   - Chess is a very simple world
+     - Contains only 64 locations
+     - Has only 32 pieces that can move in very
+       rigidly defined ways
 
-*** Machine Learning (ML)
-  + The capability of AI systems to acquire their own knowledge by
-    extracting patterns from raw data.
-  + Enables automated tackling of problems involving knowledge of the real world to
-    intelligently create solutions which appear subjective
+** Knowledge Base AI
+ One of the challenges in AI is getting the informal knowledge into a computer
+ There have been many AI projects which hard-coded knowledge about the world in formal language
+ Cyc is one of the most famous projects using this technique
+  - It is an "inference engine" and database of statements in a language called CycL.
+  - Statements manually inputted by humans.
+  - Incredibly difficult for humans to come up with
+    formal rules with enough complexity to actually describe the world
+  - Cyc failed to understand a story about a person named Fred
+    shaving in the morning
+    - Root of this misunderstanding was with associating a human w/
+      electrical parts.
+    - Associated this example with a completely different entity.
+
+** AI Deep Learning
+ This solution is allowing computers to:
+  - Learn from experience
+    - Enables the avoidance of the need for human operators
+      to formally specify knowledge.
+  - Understand the world in terms of a hierarchy
+    of concepts
+    - Each concept is defined through its relation
+      to simpler concepts
+    - Enables computers to learn complicated concepts
+ Drawing a graph to represent these concepts relationships produces a graph
+ that is very deep, hence the name /Deep Learning/
+
+ A good example of /Deep Learning/ is the /Multilayer Perceptron/ (MLP)
+ An MLP is just a mathematical function which the application of provides a new
+ /representation/ of the input.
+
+ The depth of deep learning enables the computer to learn a multistep computer program
+ and provides a sort of "stack" which each level can refer to the previous levels, increasing
+ the level of detail.
+
+ Deep learning breaks a complicated mapping into a series of simple nested mappings
+  - Visible Layer :: The variables we are able to observe
+  - Hidden Layer :: Values not given in the data, data which the model deems as useful for
+                    explaining the relationships in the observed data
+
+ There are two main ways of measuring the depth of a model:
+  - The number of sequential instructions that must be executed to evaluate the architecture
+  - The depth of the graph of the concepts relations to each other (used by /deep probabilistic models/)
+    - This is usually much shorter than the number of computational instructions
+ There is no single correct value for the depth of an architecture, just as there is no single correct value
+ for the length of a computer program
+
+ Deep learning has become more useful as the amount of avaialable training data has increased.
+
+*** History
+ Deep learning has a long history, dating back to the 1940's.
+
+ There have been three waves of development:
+  - Between the 1940s - 1960s it was known as /cybernetics/
+  - Between the 1980s - 1990s it was known as /connectionism/
+  - The current naming began in 2006
+
+ Another name that Deep Learning has gone by is /artificial neural networks/ (ANNs)
+  - The idea behind this is that deep learning models are engineered systems inspired by the
+   biological brain
+ The neural perspective on deep learning is motivated by two ideas
+  - The brain provides a proof of example that intelligent behavior is possible, and a straightforward
+    path to building AI is to reverse engineer it.
+  - It would be interesting to understand the brain and the principles that underlie human intelligence.
+ The modern term goes beyond neuroscientific perspectives and appeals to a principle of learning /multiple
+ levels of composition/, which can be applied to non-neurally inspired ML frameworks.
+ The earliest predecessors of modern deep learning were simple linear models motivated from a neuroscientific
+ perspective.
+  The /neocognitron/ (1980) introduced a powerful model architecture for processing images, and was inspired by the
+ structure of the mammalian visual system, this later becomes the basis of the modern /convolutional network/ (1988)
+*** Cybernetics/Linear Models
+ These were designed to take a set of /n/ input values x_{1},...,x_{n} and associate them with an output /y/
+ and would learn a set of weights w_{1},...,w_{n} and compute their output.
+ - f(x, w) = x_{1}w_{1} + ... + x_{n}w_{n}
+ The /perceptron/, from the 1950's, was the earliest model which could learn the weights that defined the categories when given examples of inputs
+ from each category
+
+ The /adaptive linear element/ (ADALINE), which dates to around the same time, simply returned the value of
+ f(x) itself to predict a real number, and can be used to predict these numbers from data.
+
+ The training algorithm called /stochastic gradient descent/ could use these weights and adapt them. Slightly
+ modified versions of this algorithm are the dominant algorithms used to this day.
+
+ Linear models have many limitations. Most famously they can not learn the XOR function, where:
+   f([0,1], w) = 1, and f([1,0], w) = 1, but f([1,1], w) = 0 and f([0,0], w) = 0
+ This is one of the reasons why neuroscience is no longer the predominant guide for deep learning, it is, however,
+ still an important source of inspiration for deep learning researchers.
+ We simply do not have enough information about the brain to use it as a guide.
+
+ The basic idea of having many compulational units which become intelligent only via their interactions is
+ inspired by the brain.
+
+ The endeavor to understand how the brain works on an algorithmic level is known as /computational neuroscience/
+ The field of deep learning is primarily concerned with how to build computer systems which are able to
+ solve tasks requiring intelligence, while computational neruroscience is concerned with building more accurate
+ models of how the brain actually works.
+
+
+** Machine Learning (ML)
+ Enables automated tackling of problems involving knowledge of the real world to
+ intelligently create solutions which appear subjective
+ The performance of these simple ML algorithms depends on the /representation/ of the data
+ The dependence of /representations/ is a very common problem
+ Examples include:
+   - Computer Science
+     - Operations such as searching through data can be optimized through intelligent
+       indexing, as well as structure.
+   - Daily life
+     - Arithmetic on Arabic numerals far easier for humans than Roman numerals
+ Many AI tasks can be solved by extracting relevant /features/ and then providing those to an ML alg
+ A useful /feature/ for speaker identification from sound is an estimate of the size of the speaker's
+ vocal tract
+   - Provides the ability to estimate how alike the speaker is to a man, woman or child.
+ However, many tasks are much more difficult to know what features to extract.
+   - An example of this is writing a program to detect cars in photographs
+     - We know cars have wheels, and would like to use the presence of wheels as a /feature/,
+       however, the difficulty comes from artifacts such as shadows, glare of metal parts,
+       objects hiding part of the wheel, etc.
+ Logistic Regressions are an example of some of the limitations of ML in that they:
+  + Learn how each of the /features/ provided to it correlates with various known outcomes
+  + Can't influence how /features/ are defined in any way.
+    + If an MRI scan of the patient were given, rather than the doctor's formalized report,
+       it couldn't take that data and turn it into something useful since the pixels in the MRI
+       scan don't correlate with potential complications
+
+ The new concepts learned in this section are:
+  + Machine Learning :: The capability of AI systems to acquire their own knowledge by extracting patterns
+   from raw data
   + Logistic Regression :: Simple ML algorithm which can determine whether to recommend
-      /cesarean delivery/ (C-Sections)
-    - Learns how each of the /features/ provided to it correlates with various known outcomes
-      - It can't, however, influence how /features/ are defined in any way.
-    - If an MRI scan of the patient were given, rather than the doctor's formalized report,
-      it couldn't take that data and turn it into something useful since the pixels in the MRI
-      scan don't correlate with potential complications.
-  + Naive Bayes :: Simple ML algorithm which can separate legitimate e-mal from spam.
+   /cesarean delivery/ (C-Sections)
+  + Naive Bayes :: Simple ML algorithm which can separate legitimate e-mail from spam.
   + Feature :: Each piece of information included in the /representation/
-  + The performance of these simple ML algorithms depends on the /representation/ of the
     data they are given
-    - For example, when logistic regression is used to recommend C-Sections, the doctor
-      *provides* several pieces of relevant information to the AI
-  + The dependence of /representations/ is a very common problem
-    - Examples
-      - Computer Science
-        - Operations such as searching through data can be optimized through intelligent
-          indexing, as well as structure.
-      - Daily life
-        - Arithmetic on Arabic numerals far easier for humans than Roman numerals
-    - Therefore, the representation chosen obviously has a huge effect on the performance of ML algs
-  + Many AI tasks can be solved by extracting relevant /features/ and then providing those to an ML
-    alg
-    - A useful /feature/ for speaker identification from sound is an estimate of the size of the speaker's
-      vocal tract
-      - Provides the ability to estimate how alike the speaker is to a man, woman or child.
-    - However, many tasks are much more difficult to know what features to extract.
-      - An example of this is writing a program to detect cars in photographs
-        - We know cars have wheels, and would like to use the presence of wheels as a /feature/,
-          however, the difficulty comes from artifacts such as shadows, glare of metal parts,
-          objects hiding part of the wheel, etc.
-*** Representation Learning
-   - A solution to this problem is to use ML to discover *both*
-     - The mapping from /representation/ to output
-     - The /representation/ itself
-   - Learned /representations/ often result in much better performance hand designed /representations/
-   - Enables AI to rapidly adapt to new tasks with minimal human intervention
-   - Can discover a good set of /features/ for simple tasks in minutes, and complex tasks in hours to months.
-     - HUGE reduction in time, as manually designing /features/ is a very complex task requiring a lot of time.
-     - Compare to the potential of taking decades for an entire community of researchers.
-   - The typical example of representation learning ihe /autoencoder/
-     - Encoder :: Converts input data into a different /representation/
-     - Decoder :: Converts the /encoded/ representation back into the original format.
-     - Autoencoder :: the combination of the /encoder/ function, and the /decoder/ function.
-       - Trained to preserve as much information as possible
+** Representation Learning
+  - A solution to this problem is to use ML to discover *both*
+    - The mapping from /representation/ to output
+    - The /representation/ itself
+  - Learned /representations/ often result in much better performance hand designed /representations/
+  - Enables AI to rapidly adapt to new tasks with minimal human intervention
+  - Can discover a good set of /features/ for simple tasks in minutes, and complex tasks in hours to months.
+    - HUGE reduction in time, as manually designing /features/ is a very complex task requiring a lot of time.
+    - Compare to the potential of taking decades for an entire community of researchers.
+  - The typical example of representation learning is the /autoencoder/
+ The new concepts learned in this section are:
+    - Encoder :: Converts input data into a different /representation/
+    - Decoder :: Converts the /encoded/ representation back into the original format.
+    - Autoencoder :: the combination of the /encoder/ function, and the /decoder/ function.
+      - Trained to preserve as much information as possible
+** Design of Learning Features
+ When designing features or algorithms for learning features, our goal is usually to
+ separate the /factors of variation/ that explain the observed data.
+ In this context, a factor is each separate source of incluence
+  - Factors are often not directly observed, but rather unobserved forces or objects
+    in the physical world that affect observable quantities
+  - Factors can be thought of as abstractions
+ Some examples of /factors of variation/ for a speech recording are:
+   - Speaker's age
+   - Gender
+   - Accent
 
-
+ *Most applications require us to /disentagle/ the /factors of variation/ and discard of the ones we
+ don't care about*
+ /Deep Learning/ solves this problem by expressing representations in terms of other, simpler representations
+ This enables the computer to create complex concepts out of simpler ones.
