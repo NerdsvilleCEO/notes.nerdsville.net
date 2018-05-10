@@ -1,0 +1,126 @@
+#+OPTIONS: num:1
+* Couchbase Introduction
+** Navigating the Couchbase Data Platform
+*** Features
+***** Cluster management operations exposed via REST services.
+***** Data moves between services w/out bottleneck of disk IO
+***** Streaming data through each service
+***** Documents are written to a bucket
+***** Logical namespace for storage of documents
+***** Buckets distributed throughout cluster
+***** Each bucket is divided into vBuckets (1024 of them)
+***** XDCR (Cross DC replication)
+***** Node roles to isolate services (communication async through DCP)
+***** Indexing is an example of a service which can be isolated
+
+*** Query + Indexing Services
+**** Highly parallelized query engine
+**** Memory optimized live indexes
+***** ON KEYS
+**** N1QL (SQL + JSON)
+
+*** Full Query Pipeline
+**** Parse
+**** Plan
+**** Scan
+**** Fetch
+**** Join
+**** Filter
+**** Pre-aggregate
+**** Aggregate
+**** Sort
+**** Offset
+**** Limit
+**** Project
+
+*** Full Text Search Service
+**** Index fields of document, analyze terms, return results
+**** Can be isolated as a service
+**** Any FTS service can receive the queries... "Scatters" to other nodes and "gathers" response
+
+*** Analytics
+**** Uses a shadow dataset of a couchbase node
+***** Allows for fast ingestion
+    
+*** Distributed Complex Query Processing
+**** MPP quickly executes complex queries on larger datasets
+**** Elastic scalability within environment
+   
+*** Bucket shadowing
+**** DCP (Data change Protocol) automatically syncs data to shadow sets
+**** Shadow is a query specific distribution and organization of data, aggregation, index and query processing
+
+*** Mobile
+**** N1QL queries on device
+**** Offline first
+***** Automatic conflict resolutions
+***** On-device in-app document store
+***** Data driven alerts
+**** Replication using ws or HTTP
+***** Dynamically tuneable
+***** Chanel centric access
+*** Security
+**** Built in enterprise security
+***** User authentication
+***** RBAC
+***** TLS/AES-256 (full database encryption)
+***** Log redaction
+***** GDPR compliant
+*** Eventing
+*** MDS enabled service
+*** Event-Condition-Action model for data change
+*** Stateless
+*** Handlers for onupdate (insert/update) and ondelete
+*** Couchbase functions
+**** JS functions, integrated IDE, react to events
+** Getting started with an engagement database
+*** Install couchbase
+**** Can deploy as a container using couchbase image
+**** uses ports 8091 - 8094
+*** Set up couchbase cluster
+**** Can use webui or automated setup
+*** Data goes in a bucket
+**** Can export as CSV from relational db and import as JSON to couchbase
+***** This will automatically handle the data modeling tasks
+**** Document model based off of application models
+***** Marshall/Unmarshall data
+**** Adding data bucket can be dones as:
+***** Ephemeral: Persistence w/out going to disk
+***** Couchbase: Memory first but also persists to disk
+*** Build your application
+**** SDK's in many languages
+**** Autodiscovery of nodes in cluster 
+**** Only reason to provide multiple nodes in bootstrap is for when a node is 
+     unaccessible it can try other ones
+**** developer.couchbase.com
+**** Application should have a single logical connection to the cluster
+** Couchbase Autonomous Operator
+*** Challenges
+**** Managing multiple clusters
+**** Hybrid cloud/multi cloud w/out vendor lock in
+**** Microservices and database
+***** Database siloed as a monolith in microservice architecture
+*** Caveat
+**** Still working on instantaneous usage based billing for licenses
+** Events in Couchbase
+*** Potential data processing models
+**** Message queue sends out event when change occurs
+**** Could poll for data changes
+*** Alternative model
+**** Focus on business logic
+**** Couchbase Event service
+***** Based on Event-Condition-Action model
+***** Stateless compute for low latency workloads
+***** Easy to use, manage, highly performant
+***** Do more w/ change
+**** MDS: Multi-dimensional scaling
+** Couchbase and K8s on Azure w/ AKS
+** Azure container strategy
+*** Embrace containers as ubiquitous
+** Azure container ecosystem
+*** AKS - Azure Kubernetes Service
+**** Fully managed Kubernetes cluser
+*** ACI - Azure Container Instances
+**** Easily run containers on azure w/ a single command
+**** Can use to easily scale out workloads
+*** ACR - Azure Container Registry
